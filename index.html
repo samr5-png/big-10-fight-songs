@@ -5,43 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Big 10: Fight Songs vs. Winning %</title>
     <style>
-        /* Modern Design Styling */
+        /* Professional Sports Analytics Theme */
         body { 
             margin: 0; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background-color: #f9f9f9; 
-            color: #333;
+            font-family: 'Helvetica Neue', Arial, sans-serif; 
+            background-color: #f4f4f4; 
+            color: #222;
         }
         header {
-            background-color: #001C3D; /* Big 10 Blue vibe */
+            background-color: #001C3D; /* Deep Big 10 Blue */
             color: white;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
+            border-bottom: 5px solid #CC0000; /* Contrast Red */
         }
-        .viz-container {
+        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
+        p.subtitle { opacity: 0.8; font-size: 1.1em; margin-top: 10px; }
+
+        /* THE TOOLBAR HIDER CONTAINER */
+        .viz-outer-container {
             width: 95%;
-            max-width: 1200px;
-            height: 750px; /* Adjust this to fit your dashboard height */
-            margin: -40px auto 40px auto; /* Pulls the viz up into the header slightly for a pro look */
+            max-width: 1300px;
+            height: 850px; /* This is the window the user sees */
+            margin: 40px auto;
             background: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden; /* THE SECRET: This hides the bottom bar */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            border-radius: 12px;
+            overflow: hidden; /* This acts as the "scissors" that cuts off the bottom */
             position: relative;
         }
-        iframe {
+
+        /* The actual Tableau Viz */
+        tableau-viz {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 790px; /* 40px taller than the container to push the toolbar out of sight */
-            border: none;
+            height: 895px; /* We make the viz 45px TALLER than the container to hide the bar */
         }
-        .analysis {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
+
+        .analysis-section {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 30px;
+            line-height: 1.8;
+            font-size: 1.1em;
+        }
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.9em;
+            color: #777;
         }
     </style>
 </head>
@@ -49,17 +63,32 @@
 
 <header>
     <h1>The Rhythm of Victory</h1>
-    <p>Analyzing Big 10 Fight Song Characteristics and Football Success</p>
+    <p class="subtitle">Analyzing Big 10 Fight Song Characteristics and Football Performance</p>
 </header>
 
-<div class="viz-container">
-    <iframe src="https://public.tableau.com/views/TheLinkBeweenFightSongCharactersisticsandFootballTeamPerformance/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"></iframe>
+<div class="viz-outer-container">
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+    
+    <tableau-viz id="tableauViz" 
+        src="https://public.tableau.com/views/TheLinkBeweenFightSongCharactersisticsandFootballTeamPerformance/Dashboard1" 
+        device="desktop"
+        hide-tabs="true"
+        toolbar="hidden">
+    </tableau-viz>
 </div>
 
-<div class="analysis">
-    <h2>Data Insights</h2>
-    <p>Insert your analysis here. Does tempo matter? Do brass-heavy songs correlate with higher home-win percentages? Discuss your findings here to impress the judges.</p>
-</div>
+<div class="analysis-section">
+    <h2>Project Overview & Insights</h2>
+    <p>
+        This visualization explores the intersection of musical traditions and athletic success within the Big 10 Conference. 
+        By mapping song characteristics like tempo and instrumentation against historical winning percentages, 
+        we can begin to see which "sounds" align with the most successful programs on the field.
+    </p>
+    </div>
+
+<footer>
+    Big 10 Data Visualization Contest | Created by [Your Name]
+</footer>
 
 </body>
 </html>
