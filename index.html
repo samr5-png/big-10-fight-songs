@@ -51,6 +51,29 @@
             line-height: 1.8;
             font-size: 1.1em;
         }
+
+        /* Styling for the new references section */
+        .references-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 30px;
+            line-height: 1.6;
+            font-size: 0.95em;
+            color: #444;
+        }
+        .references-section h3 {
+            color: #001C3D;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .references-section a {
+            color: #CC0000;
+            text-decoration: none;
+        }
+        .references-section a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             padding: 40px;
@@ -84,7 +107,17 @@
         By mapping song characteristics like tempo and instrumentation against historical winning percentages, 
         we can begin to see which "sounds" align with the most successful programs on the field.
     </p>
-    </div>
+</div>
+
+<div class="references-section">
+    <h3>Data Sources and References</h3>
+    <p>
+        Created as part of the 2026 Big 10 Data Visualization Contest.<br>
+        <strong>Dataset 1:</strong> <a href="https://github.com/fivethirtyeight/data/blob/master/fight-songs/fight-songs.csv" target="_blank">FiveThirtyEight Fight Songs Dataset</a><br>
+        <strong>Dataset 2:</strong> <a href="https://stats.ncaa.org/" target="_blank">NCAA Year-by-Year Football Record History</a><br>
+        <strong>Technology:</strong> Tableau Desktop & Tableau Embedding API v3.
+    </p>
+</div>
 
 <footer>
     Big 10 Data Visualization Contest 2026 | Created by Sam Rhodes
