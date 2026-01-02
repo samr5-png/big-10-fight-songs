@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big 10: Fight Songs vs. Winning %</title>
+    <style>
+        /* Modern Design Styling */
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f9f9f9; 
+            color: #333;
+        }
+        header {
+            background-color: #001C3D; /* Big 10 Blue vibe */
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .viz-container {
+            width: 95%;
+            max-width: 1200px;
+            height: 750px; /* Adjust this to fit your dashboard height */
+            margin: -40px auto 40px auto; /* Pulls the viz up into the header slightly for a pro look */
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden; /* THE SECRET: This hides the bottom bar */
+            position: relative;
+        }
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 790px; /* 40px taller than the container to push the toolbar out of sight */
+            border: none;
+        }
+        .analysis {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Rhythm of Victory</h1>
+    <p>Analyzing Big 10 Fight Song Characteristics and Football Success</p>
+</header>
+
+<div class="viz-container">
+    <iframe src="https://public.tableau.com/views/TheLinkBeweenFightSongCharactersisticsandFootballTeamPerformance/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"></iframe>
+</div>
+
+<div class="analysis">
+    <h2>Data Insights</h2>
+    <p>Insert your analysis here. Does tempo matter? Do brass-heavy songs correlate with higher home-win percentages? Discuss your findings here to impress the judges.</p>
+</div>
+
+</body>
+</html>
